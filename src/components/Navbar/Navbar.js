@@ -14,6 +14,10 @@ var Navbar = React.createClass({
     headerTitle: React.PropTypes.string
   },
 
+  getDefaultProps: function() {
+    return { headerTitle: 'Default Header' };
+  },
+
   render: function() {
     return (
       <div className="navbar-top" role="navigation">

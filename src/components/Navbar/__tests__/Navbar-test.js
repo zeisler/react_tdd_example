@@ -35,4 +35,10 @@ describe('Navbar', function() {
     expect(element.getDOMNode().textContent).toEqual(headerTitle);
   });
 
+  it('will have a default title', function(){
+    var Component = TestUtils.renderIntoDocument(React.createElement(Navbar));
+    var element = TestUtils.findRenderedDOMComponentWithClass(Component, 'navbar-brand');
+    expect(element.getDOMNode().textContent).toEqual('Default Header');
+  });
+
 });
