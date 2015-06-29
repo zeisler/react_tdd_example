@@ -41,4 +41,12 @@ describe('Navbar', function() {
     expect(element.getDOMNode().textContent).toEqual('Default Header');
   });
 
+  it('clicking header title will increment it by one', function(){
+    var Component = TestUtils.renderIntoDocument(React.createElement(Navbar));
+    React.addons.TestUtils.Simulate.click(Component.refs.headerLink);
+    expect(Component.refs.headerLink.getDOMNode().textContent).toEqual('Default Header1');
+    React.addons.TestUtils.Simulate.click(Component.refs.headerLink);
+    expect(Component.refs.headerLink.getDOMNode().textContent).toEqual('Default Header2');
+  });
+
 });
