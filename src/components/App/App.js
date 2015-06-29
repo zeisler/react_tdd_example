@@ -53,7 +53,7 @@ class App {
 
     return (
       <div className="App">
-        <Navbar />
+        <Navbar headerTitle="TDD Example React App"/>
         {
           this.props.path === '/' ?
           <div className="jumbotron">

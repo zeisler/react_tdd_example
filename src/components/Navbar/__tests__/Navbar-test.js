@@ -28,4 +28,11 @@ describe('Navbar', function() {
     expect(element).toBeDefined();
   });
 
+  it('title is passed in as prop', function(){
+    var headerTitle = 'TDD Example React App';
+    var Component = TestUtils.renderIntoDocument(React.createElement(Navbar, {headerTitle: headerTitle}));
+    var element = TestUtils.findRenderedDOMComponentWithClass(Component, 'navbar-brand');
+    expect(element.getDOMNode().textContent).toEqual(headerTitle);
+  });
+
 });
